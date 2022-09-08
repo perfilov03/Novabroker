@@ -1,0 +1,83 @@
+$bccard: #E7EAEB;
+
+.advantages__wrapper {
+    margin: 0 auto;
+    max-width: 1487px;
+    .advantages__title {
+        text-align: center;
+        margin-bottom: 84px;
+    };
+    .advantages__column {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(300px, 689px));
+        grid-column-gap: 60px;
+        grid-row-gap: 60px;
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 130px;
+        margin-left: 20px;
+        margin-right: 20px;
+        .advantages__card {
+            background-color: $bccard;
+            border-radius: 21px;
+            display: flex;
+            flex-direction: row;
+            padding: 39px 76px 24px 46px;
+            .advantages__icon {
+                align-items: flex-start;
+                margin-right: 30px;
+            }
+            .advantages__content {
+                align-items: center;
+                .content__title {
+                    margin-bottom: 10px;
+                    max-width: 350px;
+                }
+                .content__text {
+                    max-width: 473px;
+                }
+            }
+        }
+        @media (max-width: 500px) {
+            
+            .advantages__card {
+                padding: 30px 30px 24px 20px;
+                .advantages__icon {
+                    margin-right: 20px;
+                }
+                .content__title {
+                    font-size: 15px;
+                    line-height: 19 / 15 * 100%;
+                }
+                .content__text {
+                    font-size: 10px;
+                    line-height: 15 / 10 * 100%;
+                }
+                .advantages__image {
+                    width: 40px;
+                    height: auto;
+                }
+            }
+        }
+    }
+    @media (max-width: 500px){
+        .advantages__column {
+            margin-bottom: 50px;
+        }
+        .advantages__title {
+            margin-bottom: 20px;
+            font-size: 26px;
+            line-height: 35 / 26 * 100%;
+        }
+    }
+    @media (max-width: 980px) {
+        .advantages__column {
+            grid-template-rows: auto;
+            grid-template-columns: minmax(300px, 689px);
+            grid-column-gap: 0px;
+            grid-row-gap: 20px;
+            
+        }
+    }
+}

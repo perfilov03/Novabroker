@@ -1,0 +1,208 @@
+@use "_fonts.scss";
+@use "_header.scss";
+@use "_baner.scss";
+@use "_stock.scss";
+@use "_steps.scss";
+@use "_calculation.scss";
+@use "_form.scss";
+@use "_advantages.scss";
+@use "_video.scss";
+@use "_footer.scss";
+
+.calculation__image--print {
+    display: none;
+}
+
+#skiptocontent a {
+    padding: 6px;
+    position: absolute;
+    top: -50px;
+    left: 0px;
+    color: white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-bottom-right-radius: 8px;
+    background: #eb242a;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 100;
+}
+#skiptocontent a:focus {
+	position:absolute;
+	left:0px;
+	top:0px;
+	outline-color:transparent;	
+	-webkit-transition: top .1s ease-in;
+    transition: top .1s ease-in;
+}
+
+// @page {
+//     size: A4;
+//     margin: 2cm;
+// };
+@media print {
+    /* стили для печати */
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   [url]http://www.sanbeiji.com/archives/953[/url] */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    } // отключение фона
+    #skiptocontent, .card__add, .promobaner__background {
+        display: none;
+    }
+    header, footer, .form, .promobaner__buttons, .page__details {
+        display: none;
+    }
+    img, .page__calculation, .advantages__card, .advantages {
+        page-break-inside: avoid;
+    };
+    @page {
+        margin: 1cm;
+        size: A4;
+    };
+    .calculation__image--print {
+        display: block;
+    }
+    .calculation__image--once {
+        display: none;
+    }
+    .advantages__card {
+        border: 1px solid black;
+    }
+    body {
+        color: #000000;
+    };
+    .promobaner__title {
+        font-size: 40px;
+        max-width: max-content;
+        color: #000000;
+    }
+    .promobaner__text {
+        font-size: 18px;
+        max-width: max-content;
+        color: #000000;
+    }
+    .stock__wrapper {
+        display: inline-block;
+        margin: 0;
+    }
+    .stock__text {
+        font-size: 24px;
+        max-width: max-content;
+        color: #000000;
+    }
+    .stock__title {
+        font-size: 40px;
+        max-width: max-content;
+        color: #000000;
+    }
+    .stock__title, .assignments__title,
+    .calculation__title,
+    .advantages__title {
+        font-size: 30px;
+        color: #000000;
+    }
+    .promobaner__title {
+        font-size: 35px;
+        align-items: center;
+    }
+    .item-step__text,
+    .calculation__description {
+        font-size: 20px;
+        color: #000000;
+    }
+    .promobaner__body {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    .card__title {
+        color: #000000;
+        font-size: 24px;
+    }
+    .card__text {
+        font-size: 16px;
+        color: #000000;
+    }
+    .title--black,
+    .content__title {
+        color: #000000;
+        font-size: 24px;
+    }
+    .text--black {
+        color: #000000;
+        font-size: 16px;
+    }
+    .content__text {
+        font-size: 16px;
+        color: #000000;
+    }
+    .details__title {
+        font-size: 40px;
+        color: #000000;
+    }
+    .details__text {
+        font-size: 25px;
+        color: #000000;
+    }
+    .details__link {
+        font-size: 25px;
+        color: #000000;
+    }
+    .details__title {
+        max-width: 1400px;
+        color: #000000;
+            }
+    .details__text {
+        max-width: 1400px;
+        color: #000000;
+    }
+    // .page__stock {
+    //     page-break-after: always;
+    // }
+    .stock__card {
+        margin: 0px 0px 30px 0px;
+        padding: 10px 0px 40px 0px;
+    }
+
+    .assignments__body {
+        flex-direction: row;
+        .assignments__item {
+            margin-bottom: 5px;
+            .item-step__icon {
+                margin-bottom: 5px;
+            }
+            .item-step__title {
+                margin-bottom: 5px;
+                // font-size: 25px;
+            }
+        }
+        border: none;
+    }
+    .promobaner__body {
+        margin-top: 0px;
+    }
+    .promobaner__background {
+        margin-top: -0px;
+    }
+    .advantages__column {
+        margin-bottom: 0;
+    }
+    html, body {
+        height:400vh; 
+        margin: 0 !important; 
+        padding: 0 !important;
+        overflow: hidden;
+      } // не печатать пустую страницу
+
+    .advantages__wrapper {
+        .advantages__column {
+            .advantages__card {
+                padding: 24px 76px 24px 46px;
+            }
+        }
+    }
+}

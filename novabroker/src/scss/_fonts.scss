@@ -1,0 +1,173 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+// :focus {
+//   outline: 3px blue solid;
+// }
+:root {
+  font-size: 16px;
+}
+html {
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+$dark: #272d4e;
+$titleDark: #001a49;
+$wht: #ffffff;
+$gray: #57606a;
+
+%mulish {
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: $dark;
+  line-height: 1;
+  box-sizing: border-box;
+}
+.button__tel {
+  color: #eb242a;
+  @extend %mulish;
+  font-size: 16px;
+}
+
+.promobaner__title {
+  font-size: 5.625rem;
+  line-height: 109 / 90 * 100%;
+}
+.promobaner__text {
+  color: $gray;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 25 / 18 * 100%;
+}
+.promobaner__button {
+  color: $wht;
+  font-size: 1.625rem;
+}
+.link {
+  color: $gray;
+  font-size: 1.8125rem;
+  font-weight: 400;
+  .link--blue {
+    color: #0000CD;
+    font-weight: 700;
+  }
+}
+.stock__text {
+  color: $gray;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 36 / 24 * 100%;
+}
+
+.assignments__title,
+.calculation__title,
+.advantages__title {
+  font-size: 3.125rem;
+  line-height: 76 / 50 * 100%;
+}
+.item-step__text,
+.calculation__description {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: $gray;
+  line-height: 30 / 20 * 100%;
+}
+
+.card__title {
+  color: $wht;
+  font-size: 1.5rem;
+  line-height: 28 / 24 * 100%;
+}
+.card__text {
+  font-size: 1rem;
+  @extend %mulish;
+  color: black;
+  font-weight: 400;
+  line-height: 24 / 16 * 100%;
+}
+.card__title--black,
+.content__title {
+  color: $titleDark;
+  font-size: 1.5rem;
+}
+.text--black {
+  color: $titleDark;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.form__description {
+  font-size: 2.5rem;
+  color: $wht;
+  font-weight: 500;
+  line-height: 55 / 40 * 100%;
+}
+.field__input::placeholder {
+  font-size: 1.75rem;
+  color: #c3c6cb;
+  font-weight: 500;
+}
+.content__text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #4f596a;
+}
+.details__title {
+  font-size: 4.0625rem;
+  color: $titleDark;
+  line-height: 79 / 65 * 100%;
+}
+.details__text {
+  font-size: 1.5625rem;
+  @extend %mulish;
+  color: $gray;
+  line-height: 37 / 25 * 100%;
+  font-weight: 400;
+}
+.details__link {
+  font-size: 1.5625rem;
+  color: $wht;
+  @extend %mulish;
+}
+.footer__item {
+  color: $wht;
+  font-size: 1.3125rem;
+  @extend %mulish;
+  font-weight: 400;
+}
+.footer__text {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #ffffff;
+}

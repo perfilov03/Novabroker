@@ -1,0 +1,121 @@
+.promobaner {
+  background-color: #e5e5e5;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+.promobaner__wrapper {
+  max-width: 1487px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+}
+.promobaner__body {
+  margin-left: 162px;
+  z-index: 10;
+  margin-top: 150px;
+}
+.promobaner__title {
+  margin-bottom: 30px;
+  max-width: 567px;
+}
+.promobaner__text {
+  margin-bottom: 120px;
+  max-width: 551px;
+}
+.promobaner__buttons {
+  padding-bottom: 190px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.promobaner__button {
+  padding: 20px 65px;
+  background-color: #eb242a;
+  border-radius: 60px;
+  margin-right: 31px;
+}
+.link {
+  min-width: 260px;
+  .link--blue {
+    margin-left: 7px;
+    text-decoration: underline;
+  }
+}
+.promobaner__background {
+  margin-left: -200px;
+  z-index: 5;
+}
+.promobaner__image {
+  // padding-top: 70px;
+  width: 100%;
+  height: fit-content;
+}
+
+@media (max-width: 1100px) {
+  .promobaner__body {
+    margin-left: 100px;
+    margin-top: 150px;
+  }
+}
+@media (max-width: 857px) {
+  .promobaner__body {
+    margin-left: 100px;
+    margin-top: 100px;
+  }
+  .promobaner__text {
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 670px) {
+  .promobaner__wrapper {
+    flex-wrap: wrap;
+  }
+  .promobaner__body {
+    margin-left: 10px;
+    margin-top: 60px;
+  }
+  .promobaner__background {
+    margin-top: -200px;
+  }
+  .promobaner__image {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center; 
+  }
+  .promobaner__text {
+    margin-bottom: 70px;
+  }
+  .promobaner__buttons {
+    .link {
+      min-width: 0px;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .promobaner__wrapper {
+    margin-left: 10px;
+  }
+  .promobaner__title {
+    font-size: 39px;
+    line-height: 47 / 39 * 100%;
+    max-width: 249px;
+  }
+  .promobaner__text {
+    font-size: 12px;
+    line-height: 17 / 12 * 100%;
+    max-width: 299px;
+    margin-bottom: 40px;
+  }
+  .promobaner__button {
+    font-size: 19px;
+    padding: 15px 25px;
+  }
+  .promobaner__link {
+    font-size: 15px;
+    line-height: 21 / 15 * 100%;
+  }
+}

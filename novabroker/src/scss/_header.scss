@@ -1,0 +1,26 @@
+.container {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  display: flex;
+  justify-content: center;
+}
+.header__wrapper {
+  position: fixed;
+  z-index: 50;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1300px;
+  width: 100%;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+}
+.logo__image, .button__border {
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+}
